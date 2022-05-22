@@ -1,0 +1,13 @@
+{
+    "a": "34",
+    "ans": "True",
+    "category": "<<Error getting value>>",
+    "cbstr": "disp('My New Shortcut')",
+    "hPanel": "<matlab.object object at 0x00000239AE540308>",
+    "iconfile": "c:\\path\\to\\icon.gif",
+    "isEditable": "true",
+    "jShortcuts": "<<Error getting value>>",
+    "jhShortcuts": "<matlab.object object at 0x00000239AE540370>",
+    "name": "My New Shortcut",
+    "scUtils": "<<Error getting value>>"
+}

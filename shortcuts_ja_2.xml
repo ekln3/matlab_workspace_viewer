@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FAVORITESROOT version="2">
+   <title>ユーザー ショートカット</title>
+   <FAVORITECATEGORY>
+      <name>Help Browser Favorites</name>
+   </FAVORITECATEGORY>
+   <FAVORITE>
+      <label>adsfasdfadfadfasf</label>
+      <icon>標準のアイコン</icon>
+      <callback>% ショートカットの概要をここに記述&#xD;
+asdfa4e233124234</callback>
+      <editable>true</editable>
+   </FAVORITE>
+</FAVORITESROOT>

@@ -1,0 +1,270 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MATLAB workspace viewer</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <!-- <script type="text/javascript" src="incsearch.js"></script> -->
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css">
+
+
+    <style>
+        /* https://www.w3schools.com/css/css_navbar.asp */
+        ul.horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        ul.horizontal li {
+            float: left;
+        }
+
+        ul.horizontal li button {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            /* padding: 14px 16px; */
+            padding: 7px 8px;
+            text-decoration: none;
+            font-size: 1em;
+            border: none;
+        }
+
+        ul.horizontal li button:hover:not(.active) {
+            background-color: #000;
+        }
+
+        ul.horizontal li button.active {
+            background-color: #04AA6D;
+        }
+
+        .width94 {
+            width: 94%;
+        }
+
+        @media screen and (max-width: 600px) {
+            .width94 {
+                width: 100%;
+            }
+        }
+
+        ul.gray {
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+        }
+
+        ul.gray li button {
+            display: block;
+            color: #666;
+            text-align: center;
+            /* padding: 14px 16px; */
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        ul.gray li button:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        ul.gray li button.active {
+            color: white;
+            background-color: #008CBA;
+        }
+
+        ul.gray li button.active:hover {
+            color: white;
+            background-color: #008bbad7;
+        }
+
+        .rightli {
+            float: right;
+        }
+
+        @media screen and (max-width: 408px) {
+            .rightli {
+                display: none;
+            }
+        }
+
+        ul.ex {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 600px) {
+            ul.ex {
+                width: 100%;
+            }
+        }
+
+        ul.divider li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+        ul.divider li:last-child {
+            border-right: none;
+        }
+
+        ul.border {
+            border: 1px solid #555;
+        }
+
+        ul.border li button {
+            padding: 8px 16px;
+        }
+
+        ul.border li {
+            text-align: center;
+            border-bottom: 1px solid #555;
+        }
+
+        ul.border li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <div style="width:100%;">
+        <div class="w3-row">
+            <div class="w3-col">
+                <ul class="horizontal gray">
+                    <li><button href="">Home</button></li>
+                    <li><button href="#about">About</button></li>
+                    <li><button href="#log">Log</button></li>
+                    <li style="float: right;"><button class="active" href="">Refresh</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="ws">
+        <table id="table"></table>
+    </div>
+
+
+
+
+    <script type="module">
+        import { Grid, html } from "./gridjs.module.js";
+
+        var m = {
+            ws: null,
+            elem: document.querySelector("#ws"),
+
+            refresh: () => {
+                this.elem.innerText = this.ws
+            },
+        }
+
+        eel.expose(echo_in_js)
+        function echo_in_js(msg) {
+            console.log(msg);
+            eel.echo_in_python("test");
+            return msg
+        }
+
+        eel.expose(refresh_ws)
+        function refresh_ws(msg) {
+            console.log("refresh_ws")
+            m.ws = msg
+
+            // grid.js
+            console.log("grid.js")
+            let columns = ["Name", "Value",
+                {
+                    name: 'Actions',
+                    formatter: (_, row) => {
+                        console.log(_, row)
+                        //return html(`<button class="button_openvar" data-varname="${row.cells[0].data}")">OPEN</button>`)
+                        return html(`OPEN`)
+                    }
+                },
+            ]
+            console.log("gri23js")
+            let data = []
+            for (let key in m.ws) {
+                let item = m.ws[key]
+                data.push([key, item, null])
+            }
+            console.log("10")
+
+            console.log("columns", columns)
+            console.log("data", data)
+
+            let g = new gridjs.Grid({
+                columns,
+                data,
+                search: {
+                    enabled: true
+                },
+                fixedHeader: true,
+                resizable: true,
+                autoWidth: false,
+                sort: true,
+                className: {
+                    search: "GridSearch"
+                },
+                style: {
+                    table: {
+                        width: "100%",
+                        fontFamily: "Consolas",
+                    },
+                    th: {
+                        padding: "5px",
+                    },
+                    td: {
+                        padding: "5px",
+                    }
+                }
+            }).render(document.getElementById('table'));
+
+            let gs = document.querySelector(".GridSearch")
+            console.log(gs)
+            gs.style.width = "100%"
+
+            gs.querySelector("input").style.width = "100%"
+            g.on('cellClick', (...args) => console.log('cell: ' + JSON.stringify(args), args));
+            
+            
+            g.on('cellClick', (...args) => {
+                if(args[2].name != "Actions")
+                    return;
+                let row = args[3];
+                let varname = row.cells[0].data
+                console.log(varname)
+                
+                eel.openvar(varname)
+            });
+
+            // button
+            console.log("setting", "button")
+            for(let button of document.querySelectorAll(".button_openvar")){
+                console.log("setting", button)
+                button.onclick =  ((button)=>function(){
+                    console.log("clicked", button)
+                    console.log(button.dataset.varname)
+                    eel.openvar(button.dataset.varname);
+                    
+                })(button)
+            }
+
+            return null
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

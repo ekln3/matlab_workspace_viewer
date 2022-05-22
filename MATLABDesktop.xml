@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layout CurrentFolderBarBelow="yes" ShowShortcutsTab="yes">
+   <Version Major="3" Minor="1"/>
+   <Frame StatusBarShowing="yes" TitlesShowing="yes">
+      <ToolBars>
+         <ToolBar Label="現在のフォルダー" Name="Current DirectoryToolBar" Showing="yes"/>
+      </ToolBars>
+      <Location EntirelyVisible="yes" External="yes" Height="874" Type="floating" Width="1632" X="55" Y="50"/>
+      <Split Orientation="leftRight" Position="355">
+         <View Name="Current Directory" Title="現在のフォルダー"/>
+         <Split Orientation="leftRight" Position="742">
+            <Split Orientation="topBottom" Position="372">
+               <Group Name="Editor" Title="エディター"/>
+               <View Name="Command Window" Title="コマンド ウィンドウ"/>
+            </Split>
+            <View Name="Workspace" Title="ワークスペース"/>
+         </Split>
+      </Split>
+      <QuickAccessLocation Region="right_of_tabs"/>
+   </Frame>
+   <Group Alphabetize="no" CollapseUndockedDocumentToolstrips="no" Dock="yes" Guest="no" Name="Editor" PropertyClass="com.mathworks.mde.editor.EditorGroup" SelectionOrder="16" Show="yes" ShowViews="no" Title="エディター">
+      <Location Context="docked" Height="372" ParentHeight="665" ParentWidth="742" Path="EWN" Type="nested" Width="742" X="414" Y="248"/>
+      <Location Context="nested" Height="372" ParentHeight="665" ParentWidth="742" Path="EWN" Type="nested" Width="742" X="414" Y="248"/>
+      <Location Context="undocked" External="yes" Type="floating"/>
+      <Location Context="document" Maximized="yes" Type="floating"/>
+      <DocumentArea Arrangement="maximized" Bar="top" Empty="no" MaxBarWidth="240" Showing="yes" ShrinkTabs="no"/>
+   </Group>
+   <Group Alphabetize="no" CollapseUndockedDocumentToolstrips="no" Dock="yes" Guest="no" Name="Figures" PropertyClass="com.mathworks.hg.peer.FiguresGroup" Show="no" ShowViews="no" Title="Figure">
+      <Location Context="document" External="yes" Height="459" Type="floating" Width="576" X="671" Y="72"/>
+      <Split Orientation="topBottom" Position="0.667">
+         <Split Orientation="leftRight" Position="0.25">
+            <View Name="Figure Palette" Title=""/>
+            <Split Orientation="leftRight" Position="0.667">
+               <Documents Name="Figures" Title=""/>
+               <View Name="Plot Browser" Title=""/>
+            </Split>
+         </Split>
+         <View Name="Property Editor" Title=""/>
+      </Split>
+   </Group>
+   <Group Alphabetize="no" CollapseUndockedDocumentToolstrips="no" Dock="no" Guest="no" Name="Web Browser" PropertyClass="com.mathworks.mde.webbrowser.WebBrowserGroup" Show="yes" ShowViews="no" Title="Web ブラウザー">
+      <Location Context="undocked" EntirelyVisible="yes" External="yes" Height="700" Type="floating" Width="1200" X="2104" Y="230"/>
+      <Location Context="document" Maximized="yes" Type="floating"/>
+      <Frame StatusBarShowing="yes" TitlesShowing="yes">
+         <Location EntirelyVisible="yes" External="yes" Height="700" Type="floating" Width="1200" X="2104" Y="230"/>
+      </Frame>
+      <DocumentArea Arrangement="maximized" Bar="top" Empty="no" MaxBarWidth="240" Showing="no" ShrinkTabs="no"/>
+   </Group>
+   <Group Alphabetize="no" CollapseUndockedDocumentToolstrips="no" Dock="no" Guest="no" Name="Array Editor" Show="no" ShowViews="no" Title="変数">
+      <Location Context="docked" Height="285" ParentHeight="570" ParentWidth="1090" Path="EWNN" Type="nested" Width="1090" X="425" Y="168">
+         <ReferenceHierarchy>
+            <Split Orientation="leftRight" Position="421">
+               <View Name="Current Directory" Title="現在のフォルダー"/>
+               <Split Orientation="leftRight" Position="1090">
+                  <Split Orientation="topBottom" Position="570">
+                     <Split Orientation="topBottom" Position="285">
+                        <Group Name="Array Editor" Title="変数"/>
+                        <Group Name="Editor" Title="エディター"/>
+                     </Split>
+                     <View Name="Command Window" Title="コマンド ウィンドウ"/>
+                  </Split>
+                  <View Name="Workspace" Title="ワークスペース"/>
+               </Split>
+            </Split>
+         </ReferenceHierarchy>
+      </Location>
+      <Location Context="nested" Height="285" ParentHeight="570" ParentWidth="1090" Path="EWNN" Type="nested" Width="1090" X="425" Y="168">
+         <ReferenceHierarchy>
+            <Split Orientation="leftRight" Position="421">
+               <View Name="Current Directory" Title="現在のフォルダー"/>
+               <Split Orientation="leftRight" Position="1090">
+                  <Split Orientation="topBottom" Position="570">
+                     <Split Orientation="topBottom" Position="285">
+                        <Group Name="Array Editor" Title="変数"/>
+                        <Group Name="Editor" Title="エディター"/>
+                     </Split>
+                     <View Name="Command Window" Title="コマンド ウィンドウ"/>
+                  </Split>
+                  <View Name="Workspace" Title="ワークスペース"/>
+               </Split>
+            </Split>
+         </ReferenceHierarchy>
+      </Location>
+      <Location Context="undocked" EntirelyVisible="yes" External="yes" Height="473" Type="floating" Width="1213" X="190" Y="113"/>
+      <Location Context="document" Type="floating"/>
+      <Frame StatusBarShowing="yes" TitlesShowing="yes">
+         <Location EntirelyVisible="yes" External="yes" Height="473" Type="floating" Width="1213" X="190" Y="113"/>
+         <QuickAccessLocation Region="right_of_tabs"/>
+      </Frame>
+      <DocumentArea Arrangement="maximized" Bar="top" Empty="no" MaxBarWidth="240" Showing="no" ShrinkTabs="no"/>
+   </Group>
+   <Group Alphabetize="no" CollapseUndockedDocumentToolstrips="no" Dock="no" Guest="no" Name="File Comparisons" PropertyClass="com.mathworks.comparisons.report.ComparisonReportGroup" Show="no" ShowViews="no" Title="比較">
+      <Location Context="undocked" External="yes" Height="600" Type="floating" Width="800"/>
+   </Group>
+   <Group Alphabetize="no" CollapseUndockedDocumentToolstrips="no" Dock="no" Guest="no" Name="Doc Center" PropertyClass="com.mathworks.mde.help.MLHelpBrowserGroup" Show="no" ShowViews="no" Title="ヘルプ">
+      <Location Context="undocked" External="yes" Height="700" Maximized="yes" Type="floating" Width="1200" X="2109" Y="-10"/>
+      <Location Context="document" Type="floating"/>
+      <Frame StatusBarShowing="yes" TitlesShowing="yes">
+         <Location External="yes" Height="700" MaxHeight="988" MaxWidth="1920" Maximized="yes" Type="floating" Width="1200" X="2109" Y="-10"/>
+      </Frame>
+      <DocumentArea Arrangement="maximized" Bar="top" Empty="yes" MaxBarWidth="240" Showing="no" ShrinkTabs="yes"/>
+   </Group>
+   <Group Alphabetize="no" CollapseUndockedDocumentToolstrips="no" Dock="yes" Guest="no" Name="Scopes" Show="no" ShowViews="no" Title="Scopes">
+      <Location Context="document" External="yes" Height="314" Type="floating" Width="383" X="745" Y="626"/>
+   </Group>
+   <Group Alphabetize="no" CollapseUndockedDocumentToolstrips="no" Dock="yes" Guest="yes" Name="SLProjectGroup" PropertyClass="com.mathworks.toolbox.slproject.project.GUI.canvas.singleclient.ProjectGroup" Show="no" ShowViews="no" Title="Simulink プロジェクト">
+      <Location Context="docked" Height="551" ParentHeight="570" ParentWidth="1090" Path="EWNT" TabIndex="1" Type="nested" Width="1090">
+         <ReferenceHierarchy>
+            <Split Orientation="leftRight" Position="421">
+               <View Name="Current Directory" Title="現在のフォルダー"/>
+               <Split Orientation="leftRight" Position="1090">
+                  <Split Orientation="topBottom" Position="570">
+                     <Tabbed Placement="bottom" Selected="1">
+                        <Group Name="Editor" Title="エディター"/>
+                        <Group Name="SLProjectGroup" Title="Simulink プロジェクト"/>
+                     </Tabbed>
+                     <View Name="Command Window" Title="コマンド ウィンドウ"/>
+                  </Split>
+                  <View Name="Workspace" Title="ワークスペース"/>
+               </Split>
+            </Split>
+         </ReferenceHierarchy>
+      </Location>
+      <Location Context="nested" Height="551" ParentHeight="570" ParentWidth="1090" Path="EWNT" TabIndex="1" Type="nested" Width="1090">
+         <ReferenceHierarchy>
+            <Split Orientation="leftRight" Position="421">
+               <View Name="Current Directory" Title="現在のフォルダー"/>
+               <Split Orientation="leftRight" Position="1090">
+                  <Split Orientation="topBottom" Position="570">
+                     <Tabbed Placement="bottom" Selected="1">
+                        <Group Name="Editor" Title="エディター"/>
+                        <Group Name="SLProjectGroup" Title="Simulink プロジェクト"/>
+                     </Tabbed>
+                     <View Name="Command Window" Title="コマンド ウィンドウ"/>
+                  </Split>
+                  <View Name="Workspace" Title="ワークスペース"/>
+               </Split>
+            </Split>
+         </ReferenceHierarchy>
+      </Location>
+      <Location Context="document" Type="floating"/>
+      <DocumentArea Arrangement="maximized" Bar="top" Empty="no" MaxBarWidth="240" Showing="yes" ShrinkTabs="no"/>
+   </Group>
+   <Client Class="com.mathworks.mde.cmdwin.CmdWin" Dock="yes" Guest="no" Name="Command Window" SelectionOrder="21" Show="yes" Singleton="yes" StatusBarShowing="yes" TearOff="no" Title="コマンド ウィンドウ">
+      <Location Context="docked" Height="289" ParentHeight="665" ParentWidth="742" Path="EWS" Type="nested" Width="742" X="414" Y="624"/>
+      <Location Context="nested" Height="289" ParentHeight="665" ParentWidth="742" Path="EWS" Type="nested" Width="742" X="414" Y="624"/>
+   </Client>
+   <Client Class="com.mathworks.mde.cmdhist.AltHistory" Dock="no" Guest="no" Name="Command History" Show="yes" Singleton="yes" StatusBarShowing="yes" TearOff="yes" Title="コマンド履歴">
+      <Location Context="docked" Path="EES" Type="nested"/>
+      <Location Anchored="yes" Context="undocked" External="yes" Height="250" Type="floating" Width="400" X="447" Y="738"/>
+   </Client>
+   <Client Class="com.mathworks.mde.explorer.Explorer" Dock="yes" Guest="no" Name="Current Directory" SelectionOrder="18" Show="yes" Singleton="yes" StatusBarShowing="yes" TearOff="no" Title="現在のフォルダー">
+      <Location Context="docked" Height="665" ParentHeight="665" ParentWidth="1616" Path="W" Type="nested" Width="355" X="55" Y="248"/>
+      <Location Context="nested" Height="665" ParentHeight="665" ParentWidth="1616" Path="W" Type="nested" Width="355" X="55" Y="248"/>
+   </Client>
+   <Client Class="com.mathworks.mde.workspace.WorkspaceBrowser" Dock="yes" Guest="no" Name="Workspace" SelectionOrder="17" Show="yes" Singleton="yes" StatusBarShowing="yes" TearOff="no" Title="ワークスペース">
+      <Location Context="docked" Height="665" ParentHeight="665" ParentWidth="1257" Path="EE" Type="nested" Width="511" X="1160" Y="248"/>
+      <Location Context="nested" Height="665" ParentHeight="665" ParentWidth="1257" Path="EE" Type="nested" Width="511" X="1160" Y="248"/>
+   </Client>
+   <Client Class="com.mathworks.mde.profiler.Profiler" Dock="no" Guest="no" Name="Profiler" Show="no" Singleton="yes" StatusBarShowing="yes" TearOff="no" Title="プロファイラー">
+      <Location Context="docked" Path="EWN" Type="nested"/>
+      <Location Context="undocked" External="yes" Height="600" Type="floating" Width="800"/>
+   </Client>
+   <Client Class="com.mathworks.webintegration.fileexchange.ui.FileExchangeDesktopClientImpl" Dock="yes" Guest="no" Name="File Exchange" Show="no" Singleton="yes" StatusBarShowing="yes" TearOff="no" Title="File Exchange">
+      <Location Context="docked" Path="EWN" Type="nested"/>
+      <Location Context="undocked" External="yes" Height="600" Type="floating" Width="800"/>
+   </Client>
+   <Client Class="com.mathworks.page.plottool.FigurePalette" Dock="yes" Group="Figures" Guest="no" Name="Figure Palette" Show="no" Singleton="yes" StatusBarShowing="yes" TearOff="no" Title="Figure パレット">
+      <Location Context="docked" Path="NW" Type="nested"/>
+   </Client>
+   <Client Class="com.mathworks.page.plottool.PlotBrowser" Dock="yes" Group="Figures" Guest="no" Name="Plot Browser" Show="no" Singleton="yes" StatusBarShowing="yes" TearOff="no" Title="プロット ブラウザー">
+      <Location Context="docked" Path="NEE" Type="nested"/>
+   </Client>
+   <Client Class="com.mathworks.page.plottool.PropertyEditor" Dock="yes" Group="Figures" Guest="no" Name="Property Editor" Show="no" Singleton="yes" StatusBarShowing="yes" TearOff="no" Title="プロパティ エディター">
+      <Location Context="docked" Path="S" Type="nested"/>
+   </Client>
+   <Client Class="com.mathworks.mde.editor.EditorViewClient" Dock="yes" Group="Editor" Guest="no" SelectionOrder="12" Show="yes" Singleton="no" StatusBarShowing="yes" TearOff="no" Title="C:\Users\vanch\OneDrive\Documents\MyProgramming2\220505_simulink_get_port_name\untitled.m">
+      <Location Context="docked" Maximized="yes" Type="floating"/>
+      <Location Context="floatingIn" Maximized="yes" Type="floating"/>
+      <ClientData EditorFileName="C:\Users\vanch\OneDrive\Documents\MyProgramming2\220505_simulink_get_port_name\untitled.m"/>
+   </Client>
+   <Client Class="com.mathworks.mde.editor.EditorViewClient" Dock="yes" Group="Editor" Guest="no" SelectionOrder="13" Show="yes" Singleton="no" StatusBarShowing="yes" TearOff="no" Title="C:\Users\vanch\OneDrive\Documents\MyProgramming\220414. proj simu\ppjroj\yprime.c">
+      <Location Context="docked" Maximized="yes" Type="floating"/>
+      <Location Context="floatingIn" Maximized="yes" Type="floating"/>
+      <ClientData EditorFileName="C:\Users\vanch\OneDrive\Documents\MyProgramming\220414. proj simu\ppjroj\yprime.c"/>
+   </Client>
+   <Client Class="com.mathworks.mde.editor.EditorViewClient" Dock="yes" Group="Editor" Guest="no" SelectionOrder="14" Show="yes" Singleton="no" StatusBarShowing="yes" TearOff="no" Title="C:\Users\vanch\OneDrive\Documents\MyProgramming2\220505_simulink_get_port_name\foo.h">
+      <Location Context="docked" Maximized="yes" Type="floating"/>
+      <Location Context="floatingIn" Maximized="yes" Type="floating"/>
+      <ClientData EditorFileName="C:\Users\vanch\OneDrive\Documents\MyProgramming2\220505_simulink_get_port_name\foo.h"/>
+   </Client>
+   <Client Class="com.mathworks.mde.editor.EditorViewClient" Dock="yes" Group="Editor" Guest="no" SelectionOrder="15" Show="yes" Singleton="no" StatusBarShowing="yes" TearOff="no" Title="C:\Users\vanch\OneDrive\Documents\MyProgramming2\220505_simulink_get_port_name\callfoo.m">
+      <Location Context="docked" Maximized="yes" Type="floating"/>
+      <Location Context="floatingIn" Maximized="yes" Type="floating"/>
+      <ClientData EditorFileName="C:\Users\vanch\OneDrive\Documents\MyProgramming2\220505_simulink_get_port_name\callfoo.m"/>
+   </Client>
+</Layout>
